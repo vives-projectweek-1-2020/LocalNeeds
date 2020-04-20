@@ -1,3 +1,7 @@
+![[License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+![GitHub issues](https://img.shields.io/github/issues/vives-projectweek-1-2020/LocalShopper?style=plastic)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/vives-projectweek-1-2020/LocalShopper?style=plastic)
+
 # LocalNeeds
 
 ## Concept
@@ -28,18 +32,18 @@ We want to make a webpage that gives people with no time the ability to connect 
 
 * ...
 
-## Project members
+## Project Members
 
-* Arno Willems
+* [Arno Willems](https://github.com/ArnoWillems)
 
-* Keon Van Wetter
+* [Keon Van Wetter](https://github.com/keon-vanwetter)
 
-* Matthias Pardo
+* [Matthias Pardo](https://github.com/matthiaspardo)
 
-* Robin Debel
+* [Robin Debel](https://github.com/RobinDebel)
 
 ## Mentors
 
-* Piet Cordemans
+* [Piet Cordemans](https://github.com/pcordemans)
 
-* Franky Loret
+* [Franky Loret](https://github.com/frankyloret)
