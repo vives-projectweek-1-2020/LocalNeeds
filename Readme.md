@@ -24,13 +24,13 @@ We want to make a webpage that gives people with no time the ability to shop fro
 
 ## Project members
 
-* Arno Willems
+* [Arno Willems](https://github.com/ArnoWillems)
 
 * Keon Van Wetter
 
-* Matthias Pardo
+* [Matthias Pardo](https://github.com/matthiaspardo)
 
-* Robin Debel
+* [Robin Debel](https://github.com/RobinDebel)
 
 ## Mentors
 
