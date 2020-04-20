@@ -1,6 +1,6 @@
 ![[License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-![GitHub issues](https://img.shields.io/github/issues/vives-projectweek-1-2020/LocalShopper?style=plastic)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/vives-projectweek-1-2020/LocalShopper?style=plastic)
+![GitHub issues](https://img.shields.io/github/issues/vives-projectweek-1-2020/LocalShopper)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/vives-projectweek-1-2020/LocalShopper)
 
 # LocalNeeds
 
