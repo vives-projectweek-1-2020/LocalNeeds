@@ -31,3 +31,9 @@ We want to make a webpage that gives people with no time the ability to shop fro
 * Matthias Pardo
 
 * Robin Debel
+
+## Mentors
+
+* Piet Cordemans
+
+* Franky Loret
