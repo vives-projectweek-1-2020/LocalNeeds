@@ -26,7 +26,7 @@ We want to make a webpage that gives people with no time the ability to shop fro
 
 * [Arno Willems](https://github.com/ArnoWillems)
 
-* Keon Van Wetter
+* [Keon Van Wetter](https://github.com/keon-vanwetter)
 
 * [Matthias Pardo](https://github.com/matthiaspardo)
 
@@ -34,6 +34,6 @@ We want to make a webpage that gives people with no time the ability to shop fro
 
 ## Mentors
 
-* Piet Cordemans
+* [Piet Cordemans](https://github.com/pcordemans)
 
-* Franky Loret
+* [Franky Loret](https://github.com/frankyloret)
