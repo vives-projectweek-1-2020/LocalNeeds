@@ -22,7 +22,7 @@ We want to make a webpage that gives people with no time the ability to shop fro
 
 * ...
 
-## Project members
+## Project Members
 
 * Arno Willems
 
