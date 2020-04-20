@@ -6,7 +6,7 @@
 
 ## Concept
 
-We want to make a webpage that gives people with no time the ability to connect with people to complete their daily tasks. We want to make this possible by depending on people that have more time during the quarantine. We want to do this by making a website available to both parties on which they can connect and help each other out for a compensation.
+We want to make a webpage that gives people with no time the ability to connect with people to complete their daily tasks. we can make this possible by depending on people that have more time during this quarantine, making a website available to both parties on which they can connect and help each other out for a compensation.
 
 ## How
 
