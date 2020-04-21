@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/categories.css') }}">
+    <link rel="stylesheet" href="/flaskapp/static/styles/categories.css">
+    <title>Categories</title>
+</head>
+<body>
+
+    <div id="logo">
+        <img src="/static/images/logobackgroundrem.png" alt="logo">
+    </div>
+
+
+    <div id="header-wrapper">
+        <div id="header" class="container">
+            <div id="menu">
+                <ul>
+                    <li class="current_page_item"><a href="/" accesskey="1" title="">Homepage</a></li>
+                    <li><a href="/categories" accesskey="2" title="">Categories</a></li>
+                    <li><a href="#" accesskey="3" title="">About Us</a></li>
+                    <li><a href="/profile" accesskey="4" title="">My Profile</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div>
+        {% for categorie in categories %}
+           <!-- <p>Score: {{ categorie["id"] }}</p> -->
+           <p>{{ categorie["name"] }}</p>
+           <p>{{ categorie["description"] }}</p> 
+       {% endfor %}
+   </div>
+</body>
+</html>
