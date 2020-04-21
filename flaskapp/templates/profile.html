@@ -11,14 +11,16 @@
     <h3>Bio</h3>
     <div>{{biotext}}</div>
     <h3>Reviews</h3>
-    <h4>Average rating: {{avgscore}}/5  </h4>
-    <h5>Score: {{score}}/10</h5>
-    <div>{{Comment}}</div>
-    <hr>
-    <h5>Score: {{score}}/10</h5>
-    <div>{{Comment}}</div>
-    <hr>
-    <h5>Score: {{score}}/10</h5>
-    <div>{{Comment}}</div>
+    <h4>Average rating: {{avgscore}}/5</h4>
+    
+    <div>
+         {% for review in reviews %}
+            <p>Score: {{ review["score"] }}</p>
+            <p>{{ review["comment"] }}</p> 
+            
+        {% endfor %}
+    </div>
+   
+    
     </body>
 </html>
