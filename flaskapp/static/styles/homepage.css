@@ -2,6 +2,13 @@ body {
     background-color: white;
 }
 
+#logo
+	{
+		padding: 5em 0em;
+		text-align: center;
+	}
+
+
 .logo {
     margin-left: 20px;
     margin-top: 20px;
