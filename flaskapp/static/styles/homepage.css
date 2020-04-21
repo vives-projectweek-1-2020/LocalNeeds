@@ -8,6 +8,7 @@ body {
 }
 
 h1 {
+	color: black;
     margin-top: 50px;
     text-align: center;
     font-size: 50px;
@@ -32,10 +33,23 @@ nav ul {
 }
 
 section {
-    display: flex
+	display: flex;
 }
 
-h2, p {
-    margin-left: 100px;
-    margin-right: 100px;
+article {
+	flex: 1;
+	margin-left: 100px;
+	margin-right: 100px;
+	text-align: justify;
+	color: lightcyan;
+
 }
+
+
+
+h2 {
+	text-align: center;
+}
+
+
+
