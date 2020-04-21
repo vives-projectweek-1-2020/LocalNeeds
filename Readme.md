@@ -50,16 +50,10 @@ We want to make a webpage that gives people with no time the ability to connect 
 
 ## How to start the app
 
-Make sure Flask is installed with pip3.
+The app can be started using docker-compose for starting the app manually please check the readme in the flaskapp folder.
 
-### Windows
-
-```
-py -3 .\app.py
-```
-
-### Linux
+With docker-compose you can use the following command, the app will be available on localhost with port 8008.
 
 ```
-python3 app.py
+docker-compose up -d
 ```
