@@ -1,0 +1,7 @@
+version: "3"
+services:
+    uberneeds:
+        container_name: uber-needs
+        build: ./flaskapp
+        ports:
+        - "8008:8008"
