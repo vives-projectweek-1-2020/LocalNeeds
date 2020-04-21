@@ -47,3 +47,19 @@ We want to make a webpage that gives people with no time the ability to connect 
 * [Piet Cordemans](https://github.com/pcordemans)
 
 * [Franky Loret](https://github.com/frankyloret)
+
+## How to start the app
+
+Make sure Flask is installed with pip3.
+
+### Windows
+
+```
+py -3 .\app.py
+```
+
+### Linux
+
+```
+python3 app.py
+```
