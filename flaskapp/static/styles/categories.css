@@ -8,11 +8,11 @@ body
 		font-weight: 400;
 		color: #000000;
 	}
-    
-    #logo img
-    {
-        text-align: center;
-    }
+	#logo
+	{
+		padding: 5em 0em;
+		text-align: center;
+	}
 
 	.container
 	{
@@ -24,7 +24,7 @@ body
 	{
 		overflow: hidden;
 		padding: 5em 0em;
-		
+	
     }
 
     #menu
@@ -61,5 +61,57 @@ body
 	{
 		color: #FFF;
 	}
-    
+    #wrapper3
+	{
+		overflow: hidden;
+		padding: 8em 0em;
+		background: #FFF;
+	}
+
+	#portfolio .box
+	{
+		text-align: center;
+		color: rgba(0,0,0,0.5);
+	}
+	
+	#portfolio h3
+	{
+		display: block;
+		padding-bottom: 1em;
+		text-transform: uppercase;
+		font-size: 1em;
+		color: rgba(0,0,0,0.6);
+	}
+
+	#portfolio .title
+	{
+		text-align: center;
+	}
+
+	#portfolio .title h2
+	{
+		color: rgba(0,0,0,0.8);
+	}
+
+	.column1,
+	.column2,
+	.column3,
+	.column4
+	{
+		width: 282px;
+	}
+	
+	.column1,
+	.column2,
+	.column3
+	{
+		float: left;
+		margin-right: 24px;
+	}
+	
+	.column4
+	{
+		float: right;
+	}
+	
 
