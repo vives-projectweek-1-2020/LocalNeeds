@@ -9,14 +9,18 @@
 </head>
 <body>
 
-    <div id="logo">
+    <!-- <div id="logo">
         <img src="/static/images/logobackgroundrem.png" alt="logo" width="100" height="100" >
-    </div>
+    </div> -->
     
     <div id="header-wrapper">
         <div id="header" class="container">
+            
             <div id="menu">
                 <ul>
+                    <li id="logo">
+                        <img src="/static/images/logobackgroundrem.png" alt="logo" width="100" height="100" >
+                    </li>
                     <li class="current_page_item"><a href="/" accesskey="1" title="">Homepage</a></li>
                     <li><a href="/categories" accesskey="2" title="">Categories</a></li>
                     <li><a href="#" accesskey="3" title="">About Us</a></li>
@@ -25,45 +29,42 @@
             </div>
         </div>
     </div>
+
 <div id="wrapper3">
 	<div id="portfolio" class="container">
 		<div class="title">
 			<h2>Categories</h2>
             <span class="byline">Verschillende opties</span> 
         </div>
-		<div class="column1">
-			<div class="box"> <a href="#"><img src="images/scr01.jpg" alt="" class="image image-full" /></a>
-				<h3>Vestibulum venenatis</h3>
-				<p>Fermentum nibh augue praesent a lacus at urna congue rutrum.</p>
-				<a href="#" class="button button-small">Etiam posuere</a> </div>
-		</div>
-		<div class="column2">
-			<div class="box"> <a href="#"><img src="images/scr02.jpg" alt="" class="image image-full" /></a>
-				<h3>Praesent scelerisque</h3>
-				<p>Vivamus fermentum nibh in augue praesent urna congue rutrum.</p>
-				<a href="#" class="button button-small">Etiam posuere</a> </div>
-		</div>
-		<div class="column3">
-			<div class="box"> <a href="#"><img src="images/scr03.jpg" alt="" class="image image-full" /></a>
-				<h3>Donec dictum metus</h3>
-				<p>Vivamus fermentum nibh in augue praesent urna congue rutrum.</p>
-				<a href="#" class="button button-small">Etiam posuere</a> </div>
-		</div>
-		<div class="column4">
-			<div class="box"> <a href="#"><img src="images/scr04.jpg" alt="" class="image image-full" /></a>
-				<h3>Mauris vulputate dolor</h3>
-				<p>Rutrum fermentum nibh in augue praesent urna congue rutrum.</p>
-				<a href="#" class="button button-small">Etiam posuere</a> </div>
-		</div>
+
+        {% for categorie in categories %}
+
+            {% if loop.index % 4 == 1 and loop.index > 1 %}
+                <div class="row">
+            {% elif loop.index % 4 == 1 %}
+                <div>
+            {% endif %}
+
+            <div class="column{{ loop.index % 4 }}">
+                <div class="box"> <a href="#"><img src="images/scr01.jpg" alt="" class="image image-full" /></a>
+                    <h3>{{ categorie["name"] }}</h3>
+                    <p>{{ categorie["description"] }}</p>
+                    <a href="#" class="button button-small">more info</a>
+                </div>
+            </div>
+
+            {% if loop.index % 4 == 0 %}
+                </div>
+            {% endif %}
+
+        {% endfor %}
+
+        {% if categories|length > 4 %}
+            </div>
+        {% endif %}
+
 	</div>
 </div>
 
-    <div>
-        {% for categorie in categories %}
-           <!-- <p>Score: {{ categorie["id"] }}</p> -->
-           <p>{{ categorie["name"] }}</p>
-           <p>{{ categorie["description"] }}</p> 
-       {% endfor %}
-   </div>
 </body>
 </html>

@@ -91,15 +91,13 @@ body
 	.column1,
 	.column2,
 	.column3,
-	.column4
+	.column0
 	{
 		width: 282px;
 		float: left;
-		margin-right: 24px;
-		text-align: center;
 	}
 	
-	/* .column1,
+	.column1,
 	.column2,
 	.column3
 	{
@@ -107,9 +105,13 @@ body
 		margin-right: 24px;
 	}
 	
-	.column4
+	.column0
 	{
 		float: right;
-	} */
+	}
+
+	.row {
+		margin-top: 14%;
+	}
 	
 
