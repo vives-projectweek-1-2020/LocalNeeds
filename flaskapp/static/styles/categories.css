@@ -8,11 +8,6 @@ body
 		font-weight: 400;
 		color: #000000;
 	}
-	#logo
-	{
-		padding: 5em 0em;
-		text-align: center;
-	}
 
 	.container
 	{
@@ -64,7 +59,7 @@ body
     #wrapper3
 	{
 		overflow: hidden;
-		padding: 8em 0em;
+		padding: 6em 0em;
 		background: #FFF;
 	}
 
@@ -99,9 +94,12 @@ body
 	.column4
 	{
 		width: 282px;
+		float: left;
+		margin-right: 24px;
+		text-align: center;
 	}
 	
-	.column1,
+	/* .column1,
 	.column2,
 	.column3
 	{
@@ -112,6 +110,6 @@ body
 	.column4
 	{
 		float: right;
-	}
+	} */
 	
 
