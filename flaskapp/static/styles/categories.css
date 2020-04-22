@@ -9,6 +9,11 @@ body
 		color: #000000;
 	}
 
+	#logo 
+	{
+		margin-right: 30px;
+	}
+
 	.container
 	{
 		margin: 0px auto;
@@ -18,7 +23,7 @@ body
     #header-wrapper
 	{
 		overflow: hidden;
-		padding: 5em 0em;
+		padding: 2em 0em;
 	
     }
 
