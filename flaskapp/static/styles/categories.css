@@ -17,13 +17,14 @@ body
 .container
 {
 	margin: 0px auto;
-	width: 1200px;
+	width: 1365px;
 }
 
 #header-wrapper
 {
 	overflow: hidden;
-	padding: 2em 0em;
+	height: 15vh;
+    line-height: 7vh;
 
 }
 
@@ -64,12 +65,11 @@ body
 #wrapper3
 {
 	overflow: hidden;
-	padding: 6em 0em;
-	background: #FFF;
 }
 #wrapper1
 {
  text-align: center;
+ height: 13vh;
 }
 
 
@@ -91,6 +91,7 @@ body
 #portfolio .title
 {
 	text-align: center;
+	height: 13vh;
 }
 
 #portfolio .title h2
@@ -105,6 +106,9 @@ body
 {
 	width: 282px;
 	float: left;
+	background-color: #ffffff8c;
+	border-radius: 0.5em;
+	padding: 0.5% 1.5% 1.5% 1.5%;
 }
 
 .column1,
@@ -121,7 +125,7 @@ body
 }
 
 .row {
-	margin-top: 14%;
+	margin-top: 15%;
 }
 	
 img 
@@ -138,4 +142,21 @@ img
 
 .description {
 	height: 50px;
+}
+
+main {
+	background-image: url("/static/images/city.jpg");
+	background-repeat: no-repeat;
+	height: 70vh;
+}
+
+#test {
+	color: white;
+}
+
+#menu #categories {
+	background-color: #ffffff;
+    color: #394a58;
+	border-radius: 2em;
+	padding: 0% 6%;
 }
