@@ -7,10 +7,18 @@
 </head>
 <body>
     <a href="/homepage">home</a>
-    <h2>{{username}}</h2> 
+
+    {% if google_user.is_authenticated %}
+        <h2>{{ google_user.name }}</h2> 
+        <p>{{ google_user.email }}</p>
+        <img src="{{ google_user.profile_pic }}" alt="Google profile pic"></img>
+    {% endif %}
+    
     <h3>{{Firstname}} {{Lastname}}</h3>
+
     <h3>Bio</h3>
     <div>{{biotext}}</div>
+
     <h3>Reviews</h3>
     <h4>Average rating: {{avgscore}}/5</h4>
     
