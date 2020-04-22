@@ -23,8 +23,8 @@ body
 #header-wrapper
 {
 	overflow: hidden;
-	padding: 2em 0em;
-
+	height: 17.4vh;
+	line-height: 9vh;
 }
 
 #menu
@@ -123,7 +123,7 @@ img
 {
 	left: 11%;
     top: 6.5%;
-    position: fixed;
+    position: absolute;
 }
 
 .centertext
@@ -159,5 +159,5 @@ h2 {
 main {
 	background-image: url("/static/images/city.jpg");
 	background-repeat: no-repeat;
-	height: 825px;
+	height: 82.6vh;
 }
