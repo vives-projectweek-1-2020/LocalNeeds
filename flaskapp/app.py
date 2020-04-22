@@ -147,7 +147,7 @@ def profile():
 
 @app.route("/categories")
 def categories():
-	return render_template("categories.html", categories=getcategories())
+	return render_template("categories.html", categories=getcategories(), google_user=current_user)
 
 def getcategories():
 	conn = sqlite3.connect("database/UberNeeds.db")
