@@ -48,7 +48,7 @@ def load_user(user_id):
 
 @app.route("/")
 def homepage():
-	return render_template("homepage.html")
+	return render_template("homepage.html", google_user=current_user)
 
 def get_google_provider_cfg():
     return requests.get(GOOGLE_DISCOVERY_URL).json()

@@ -17,7 +17,11 @@
                     <a href="/">Home</a>
                 </li>
                 <li>
-                    <a class="button" href="/login">Google Login</a>
+                    {% if google_user.is_authenticated %}
+                        <a class="button" href="/logout">Logout</a>
+                    {% else %}
+                        <a class="button" href="/login">Google Login</a>
+                    {% endif %}
                 </li>
                 <li>
                     <a href="/categories">Categories</a>
