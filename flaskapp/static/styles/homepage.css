@@ -130,3 +130,34 @@ img
 {
 	text-align: center;
 }
+
+h1 {
+	color: black;
+    margin-top: 50px;
+    text-align: center;
+    font-size: 50px;
+}
+
+section {
+	display: flex;
+}
+
+article {
+	flex: 1;
+	margin-left: 150px;
+	margin-right: 150px;
+	text-align: justify;
+	color: lightcyan;
+	margin-top: 15%
+}
+
+
+h2 {
+	text-align: center;
+}
+
+main {
+	background-image: url("/static/images/city.jpg");
+	background-repeat: no-repeat;
+	height: 825px;
+}
