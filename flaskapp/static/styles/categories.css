@@ -126,3 +126,11 @@ img
     position: fixed;
 }
 	
+.moreinfo {
+	text-decoration: none;
+	color: #565656;
+}
+
+.description {
+	height: 50px;
+}
