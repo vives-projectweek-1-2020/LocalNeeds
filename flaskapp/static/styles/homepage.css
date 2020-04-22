@@ -30,13 +30,12 @@ nav {
 
 nav li {
 	display: inline;
-    margin: 10px;
+	margin: 10px;
 }
 
 nav ul {
 	text-align: right;
     margin-right: 100px;
-    color: white;
 }
 
 section {
@@ -45,14 +44,16 @@ section {
 
 article {
 	flex: 1;
-	margin-left: 100px;
-	margin-right: 100px;
+	margin-left: 150px;
+	margin-right: 150px;
 	text-align: justify;
 	color: lightcyan;
 
 }
 
-
+a {
+	color: aqua;
+}
 
 h2 {
 	text-align: center;
