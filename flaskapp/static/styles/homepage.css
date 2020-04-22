@@ -22,7 +22,7 @@ h1 {
 }
 
 nav {
-    margin-top: 20spx;
+    margin-top: 20px;
     position: absolute;
     right: 15px;
     top: 15px;
@@ -35,7 +35,7 @@ nav li {
 
 nav ul {
 	text-align: right;
-    margin-right: 100px;
+    margin-right: auto;
 }
 
 section {
@@ -58,6 +58,4 @@ a {
 h2 {
 	text-align: center;
 }
-
-
 
