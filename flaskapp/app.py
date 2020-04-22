@@ -19,9 +19,15 @@ import requests
 from db import init_db_command
 from user import User
 
-GOOGLE_CLIENT_ID = "369505199251-kjd55smkceqjd8t0t77dpd6ss5jjmmnl.apps.googleusercontent.com"
-GOOGLE_CLIENT_SECRET = "2DJSKdL1hav1M1OWsOdsk-mu"
+# .env
+from dotenv import load_dotenv
+load_dotenv('.env')
+
+GOOGLE_CLIENT_ID = os.getenv('GOOGLE_CLIENT_ID')
+GOOGLE_CLIENT_SECRET = os.getenv('GOOGLE_CLIENT_SECRET')
 GOOGLE_DISCOVERY_URL = "https://accounts.google.com/.well-known/openid-configuration"
+
+print(GOOGLE_CLIENT_ID)
 
 app = Flask(__name__)
 app.secret_key = os.urandom(24)
