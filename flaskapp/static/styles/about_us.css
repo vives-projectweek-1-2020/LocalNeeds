@@ -17,30 +17,42 @@ article {
 
 }
 
-div {
-    width: 500px;
-    align-content: center;
-    margin: auto;
-}
 p {
     font-size: 20px;
     text-align: justify;
 }
 nav li {
 	display: inline;
-    margin: 10%;
+    margin: 10px;
     font-size: 20px;
 }
-footer {
-    position: relative;
-    top: 250px;
-}
+
 nav ul {
-    text-align: center;
-    margin-left: auto;
+    text-align: right;
     margin-right: auto;
+    position: relative;
+    bottom: 50px;
 }
 
 .logo {
   background-color: lightgray;
+}
+
+.main {
+    background-color: white;
+    width: 500px;
+    align-content: center;
+    margin: auto;
+}
+
+footer {
+    font-size: 20px;
+    font-weight: bold;
+   position: relative;
+   top: 250px;
+   left: 10px;
+}
+.text {
+    font-size: 20px;
+    font-weight: normal;
 }
