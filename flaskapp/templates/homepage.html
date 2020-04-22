@@ -8,41 +8,40 @@
 
     </style>
 </head>
-<body background="static\images\city.jpg">
-    <img class="logo" src="static\images\logobackgroundrem.png" alt="logo" width="100" height="100">
-    <header>
-        <nav>
-            <ul>
-                <li>
-                    <a href="/">Home</a>
-                </li>
-                <li>
-                    <a href="/categories">Categories</a>
-                </li>
-                <li>
-                    <a href="">About us</a>
-                </li>
-
-                {% if google_user.is_authenticated %}
+       <div id="header-wrapper">
+        <div id="header" class="container">
+            
+            <div id="menu">
+                <ul>
+                    <li id="logo">
+                        <img src="/static/images/logoplatremovebg.png" alt="logo" width="150px">
+                    </li>
+                    <li class="current_page_item"><a href="/" accesskey="1" title="">Homepage</a></li>
+                    <li><a href="/categories" accesskey="2" title="">Categories</a></li>
+                    <li><a href="#" accesskey="3" title="">About Us</a></li>
+                    {% if google_user.is_authenticated %}
                     <li>
                         <a href="/profile">Profile</a>
                     </li>
                     <li>
-                        <a class="button" href="/logout">Logout</a>
+                        <a class="button" href="/logout" accesskey="4">Logout</a>
                     </li>
                     
-                {% else %}
-                    <li>
-                        <a class="button" href="/login">Google Login</a>
-                    </li>
-                {% endif %}
-            </ul>
-        </nav>  
-    </header>
-    <h1>Uber Needs</h1>
+                    {% else %}
+                        <li>
+                            <a class="button" href="/login" accesskey="5">Google Login</a>
+                        </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    
     
                     
-    <section>
+     <section id = "wrapper3" class="centertext">
+         <h1 class="centertext">Uber Needs</h1>
         <article class="gets">
             <h2>Helpers</h2>
             <p class="p1">
@@ -57,7 +56,7 @@
             </p>
         </article>
  
-    </section>
+    </section> 
     
    
 </body>
