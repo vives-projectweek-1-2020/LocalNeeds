@@ -17,15 +17,14 @@ body
 .container
 {
 	margin: 0px auto;
-	width: 1365px;
+	width: 1200px;
 }
 
 #header-wrapper
 {
 	overflow: hidden;
-	height: 15vh;
-    line-height: 7vh;
-
+	height: 17.4vh;
+	line-height: 9vh;
 }
 
 #menu
