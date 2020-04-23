@@ -107,6 +107,14 @@ body
 	color: rgba(0,0,0,0.8);
 }
 
+.gets,
+.gots 
+{
+color:rgba(0,0,0,0.6) ;
+}
+
+.gets,
+.gots,
 .column1,
 .column2,
 .column3,
@@ -118,6 +126,8 @@ body
 	border-radius: 0.5em;
 	padding: 0.5% 1.5% 1.5% 1.5%;
 }
+
+
 
 .column1,
 .column2,
@@ -162,7 +172,7 @@ main {
 	color: white;
 }
 
-#menu #categories {
+#menu #currenttab {
 	background-color: #ffffff;
     color: #394a58;
 	border-radius: 2em;
