@@ -153,6 +153,7 @@ def categoriesfeed(category):
         join UsersCategories on Users.id = UsersCategories.User_id
         join Categories on UsersCategories.Categorie_id = Categories.id
         where Categories.Name = ?
+        order by AvgRating desc
     '''
     cursor = conn.execute(statement, [category])
     data = {}
