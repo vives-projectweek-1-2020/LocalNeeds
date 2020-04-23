@@ -38,8 +38,6 @@ services:
         build: ./flaskapp
         ports:
           - "8008"
-        env_file:
-          - .env
         networks:
             - web
         labels:
@@ -49,6 +47,30 @@ services:
           - traefik.http.routers.uberneeds.tls.certresolver=le
           - traefik.http.middlewares.uberneeds.compress=true
           - traefik.http.routers.uberneeds.middlewares=uberneeds@docker
+
+    # Watch acme.json and dump certificates to files
+    certdumper:
+      container_name: traefik_certdumper
+      image: alpine:latest
+      depends_on:
+        - traefik
+      restart: unless-stopped
+      volumes:
+        - data:/traefik
+      command: >
+        ash -c " \
+          apk --no-cache add inotify-tools jq openssl util-linux bash && \
+          wget https://raw.githubusercontent.com/containous/traefik/master/contrib/scripts/dumpcerts.sh -O dumpcerts.sh && \
+          mkdir -p /traefik/ssl/ && \
+          while true; do \
+            inotifywait -e modify /traefik/acme.json && \
+              bash dumpcerts.sh /traefik/acme.json /traefik/ssl/ && \
+              ln -f /traefik/ssl/certs/* /traefik/ssl/ && \
+              ln -f /traefik/ssl/private/* /traefik/ssl/; \
+          done"
+
+volumes:
+  data:
 
 networks:
     web:
