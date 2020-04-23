@@ -145,6 +145,10 @@ def logout():
 def profile():
 	return render_template("profile.html", google_user=current_user)
 
+@app.route("/categoriesfeed")
+def categoriesfeed():
+	return render_template("categoriesfeed.html", google_user=current_user)
+
 @app.route("/categories")
 def categories():
 	return render_template("categories.html", categories=getcategories(), google_user=current_user)
