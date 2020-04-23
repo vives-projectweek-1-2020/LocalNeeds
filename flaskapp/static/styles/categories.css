@@ -65,14 +65,7 @@ body
 #wrapper3
 {
 	overflow: hidden;
-	padding: 6em 0em;
-	background: #FFF;
 }
-#wrapper4
-{
-	overflow: hidden;
-}
-
 #wrapper1
 {
  text-align: center;
@@ -139,7 +132,7 @@ img
 {
 	left: 11%;
     top: 6.5%;
-    position: absolute;
+    position: fixed;
 }
 	
 .moreinfo {
@@ -166,34 +159,4 @@ main {
     color: #394a58;
 	border-radius: 2em;
 	padding: 0% 6%;
-}
-
-.centertext
-{
-	text-align: center;
-}
-
-h1 {
-	color: black;
-    margin-top: 50px;
-    text-align: center;
-    font-size: 50px;
-}
-
-section {
-	display: flex;
-}
-
-article {
-	flex: 1;
-	margin-left: 150px;
-	margin-right: 150px;
-	text-align: justify;
-	color: lightcyan;
-	margin-top: 15%
-}
-
-
-h2 {
-	text-align: center;
 }
