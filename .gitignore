@@ -1,4 +1,6 @@
 flaskapp/__pycache__
 flaskapp/.env
+flaskapp/key.pem
+flaskapp/cert.pem
 acme.json
 .env
