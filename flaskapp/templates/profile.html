@@ -50,6 +50,7 @@
                 <h3>Bio</h3>
                 <div>{{biotext}}</div>
 
+<<<<<<< HEAD
                 <h3>Reviews</h3>
                 <h4>Average rating: {{avgscore}}/5</h4>
                 
@@ -64,4 +65,17 @@
     <main >
                   
     </body>
+=======
+    <h3>Reviews</h3>
+    <h4>Average rating: {{avgscore}}/5</h4>
+    
+    <div>
+         {% for review in reviews %}
+            <p>Score: {{ review["score"] }}</p>
+            <p>{{ review["comment"] }}</p> 
+            
+        {% endfor %}
+    </div>
+ </body>
+>>>>>>> df2bcd6de58c6c57cbeb38b1b086a6e749de6432
 </html>

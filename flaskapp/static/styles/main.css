@@ -193,6 +193,7 @@ h1 {
 
 section {
 	display: flex;
+
 }
 
 article {
@@ -204,7 +205,22 @@ article {
 	margin-top: 15%
 }
 
-
 h2 {
+	text-align: center;
+}
+form textarea
+			{
+				position: relative;
+				display: block;
+				border: 0;
+				background: rgba(255,255,255,0.75);
+				width: 100%;
+				border-radius: 0.50em;
+				margin: 1em 0em;
+				padding: 1.50em 1em;
+				font-family: 'Source Sans Pro', sans-serif;
+				font-size: 1em;
+			}
+.idea{
 	text-align: center;
 }
