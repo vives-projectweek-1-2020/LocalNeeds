@@ -4,8 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
+
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/about_us.css') }}">
 </head>
 <body>
+    <img class="logo" src="static\images\logoplatremovebg.png" alt="logo" width="200" height="50">
+    <nav>
+        <ul>
+            <li>
+                <a href="/">Home</a>
+            </li>
+            <li>
+                <a href="/login">Login</a>
+            </li>
+            <li>
+                <a href="/categories">Categories</a>
+            </li>
+            <li>
+                <a href="/profile">profile</a>
+            </li>
+            <li>
+                <a href="/about_us">(About us)</a>
+            </li>
+        </ul>
+    </nav>  
+    <h1>Meet Our Team</h1>
+    <div class="main">
+            <article>
+                <p>
+                    We are a team of developers whose goal is to help people during this time of crisis. People who aren't able or allowed to go outside or people who just don't have any time such as doctors, nurses and so on. These people have needs whether it's an important need like food or water or less important ones. If you're just sitting at home all day and don't know what to do. Why not join our cause?
+                </p>
+            </article>
+    </div>
+<footer>
+    Contact us at: <span class="text">@something.com</span> 
+</footer>
     
 </body>
 </html>

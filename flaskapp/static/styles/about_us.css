@@ -1,0 +1,58 @@
+body {
+    background-color: lightgray;
+}
+
+h1 {
+    color: black;
+    text-align: center;
+    margin-top: 100px;
+    font-size: 50px;
+}
+
+article {
+    background-color: lightgray;
+    display: flex;
+    align-content: center;
+    flex: 1;
+
+}
+
+p {
+    font-size: 20px;
+    text-align: justify;
+}
+nav li {
+	display: inline;
+    margin: 10px;
+    font-size: 20px;
+}
+
+nav ul {
+    text-align: right;
+    margin-right: auto;
+    position: relative;
+    bottom: 50px;
+}
+
+.logo {
+  background-color: lightgray;
+}
+
+.main {
+    background-color: white;
+    width: 500px;
+    align-content: center;
+    margin: auto;
+}
+
+footer {
+    font-size: 20px;
+    font-weight: bold;
+   position: relative;
+   top: 250px;
+   left: 10px;
+}
+.text {
+    font-size: 20px;
+    font-weight: normal;
+}
