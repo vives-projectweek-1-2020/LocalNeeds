@@ -9,6 +9,10 @@ body
 	font-weight: 400;
 	color: #000000;
 }
+#bodycolortest 
+{
+	background: black;
+}
 
 #logo 
 {
@@ -108,7 +112,8 @@ body
 }
 
 .gets,
-.gots 
+.gots,
+.teamarticle 
 {
 color:rgba(0,0,0,0.6) ;
 }
@@ -244,7 +249,9 @@ form textarea
 {
 	font-size: 20px;
 	font-weight: bold;
-	color: black;
+	color: white;
+	margin-left: 10px;
+	margin-top: 10px;
 }
 
 .e_mail 
@@ -253,6 +260,7 @@ form textarea
     font-weight: normal;
 }
 
+<<<<<<< HEAD
 .category_details {
 	background-color: #ffffff8c;
 	border-radius: 0.5em 0 0 0.5em;
@@ -308,3 +316,5 @@ form textarea
     width: 35vh;
     margin-top: -4vh;
 }
+=======
+>>>>>>> 965a8bf7694daa05c59aef521e7c395e3c397047
