@@ -59,10 +59,10 @@ body
 	color: #FFF;
 }
 
-#menu .current_page_item a
+/* #menu .current_page_item a
 {
 	color: #FFF;
-}
+} */
 #wrapper3
 {
 	overflow: hidden;
@@ -172,7 +172,7 @@ img
 main {
 	background-image: url("/static/images/city.jpg");
 	background-repeat: no-repeat;
-	height: 70vh;
+	height: 76vh;
 }
 
 #test {
@@ -265,7 +265,7 @@ form textarea
 .category_details {
 	background-color: #ffffff8c;
 	border-radius: 0.5em 0 0 0.5em;
-	height: 57vh;
+	height: 64vh;
 	top: 19vh;
 	position: fixed;
 	left: 21vh;
@@ -308,7 +308,7 @@ form textarea
 }
 
 .category {
-	color: white;
+	color: #394a58;
     text-transform: uppercase;
     font-weight: 600;
     letter-spacing: 0.2em;
@@ -316,7 +316,16 @@ form textarea
     text-align: center;
     margin-left: 38.15%;
     width: 35vh;
-    margin-top: -4vh;
+	margin-top: -6.3vh;
+    margin-bottom: 3.4vh;
+}
+
+ul li #categorytab {
+	background-color: #ffffff;
+    color: #394a58;
+	border-radius: 2em;
+	height: 5vh;
+    line-height: 2vh;
 }
 
 .checked {
@@ -349,4 +358,10 @@ form textarea
     text-decoration: none;
     border: 1px solid white;
     padding: 0.4em;
+}
+
+#header-wrapper-categoriesfeed {
+	overflow: hidden;
+    height: 16.2vh;
+    line-height: 7vh;
 }
