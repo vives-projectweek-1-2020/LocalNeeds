@@ -3,10 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Uber Needs</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/profile.css') }}">
+    <title>Profile</title>
 </head>
 <body>
-    <a href="/">home</a>
+    <div id="header-wrapper">
+        <div id="header" class="container">
+            
+            <div id="menu">
+                <ul>
+                    <li id="logo">
+                        <img src="/static/images/logoplatremovebg.png" alt="logo" width="150px">
+                    </li>
+                    <li class="current_page_item"><a href="/" accesskey="1" title="">Homepage</a></li>
+                    <li><a href="/categories" accesskey="2" title="">Categories</a></li>
+                    <li><a href="#" accesskey="3" title="">About Us</a></li>
+                    {% if google_user.is_authenticated %}
+                    <li>
+                        <a href="/profile">Profile</a>
+                    </li>
+                    <li>
+                        <a class="button" href="/logout" accesskey="4">Logout</a>
+                    </li>
+                    
+                    {% else %}
+                        <li>
+                            <a class="button" href="/login" accesskey="5">Google Login</a>
+                        </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </div>
 
     {% if google_user.is_authenticated %}
         <h2>{{ google_user.name }}</h2> 
