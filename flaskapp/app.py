@@ -147,7 +147,26 @@ def profile():
 
 @app.route("/categoriesfeed/<category>")
 def categoriesfeed(category):
-    return render_template("categoriesfeed.html", google_user=current_user, text=category)
+    conn = sqlite3.connect("database/UberNeeds.db")
+    statement = '''
+        select Users.* from Users
+        join UsersCategories on Users.id = UsersCategories.User_id
+        join Categories on UsersCategories.Categorie_id = Categories.id
+        where Categories.Name = ?
+    '''
+    cursor = conn.execute(statement, [category])
+    data = {}
+
+    for row in cursor:
+        userid = row[0]
+        data[userid] = []
+        for element in row:
+            data[userid].append(element)
+    conn.close()
+
+    print(data)
+    
+    return render_template("categoriesfeed.html", google_user=current_user, text=category, data=data)
 
 @app.route("/about_us")
 def aboutus():

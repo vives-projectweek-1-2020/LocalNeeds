@@ -297,13 +297,11 @@ form textarea
 }
 
 .user {
-	height: 7vh;
     margin: 0 44vh;
     border-style: dashed;
     border-width: 0.1em;
     margin-bottom: 2vh;
-    padding-left: 1vh;
-    padding-bottom: 2vh;
+    padding-left: 18vh;
 }
 
 .category {
@@ -316,4 +314,8 @@ form textarea
     margin-left: 38.15%;
     width: 35vh;
     margin-top: -4vh;
+}
+
+.checked {
+	color: orange;
 }
