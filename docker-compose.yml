@@ -37,16 +37,18 @@ services:
         container_name: uberneeds
         build: ./flaskapp
         ports:
-        - "8008"
+          - "8008"
+        env_file:
+          - .env
         networks:
             - web
         labels:
-        - traefik.enable=true
-        - traefik.http.routers.uberneeds.rule=Host(`${DOMAIN}`)
-        - traefik.http.routers.uberneeds.tls=true
-        - traefik.http.routers.uberneeds.tls.certresolver=le
-        - traefik.http.middlewares.uberneeds.compress=true
-        - traefik.http.routers.uberneeds.middlewares=uberneeds@docker
+          - traefik.enable=true
+          - traefik.http.routers.uberneeds.rule=Host(`${DOMAIN}`)
+          - traefik.http.routers.uberneeds.tls=true
+          - traefik.http.routers.uberneeds.tls.certresolver=le
+          - traefik.http.middlewares.uberneeds.compress=true
+          - traefik.http.routers.uberneeds.middlewares=uberneeds@docker
 
 networks:
     web:
