@@ -147,8 +147,7 @@ def profile():
 
 @app.route("/categoriesfeed/<category>")
 def categoriesfeed(category):
-    text = "This is about " + category
-    return render_template("categoriesfeed.html", google_user=current_user, text=text)
+    return render_template("categoriesfeed.html", google_user=current_user, text=category)
 
 @app.route("/about_us")
 def aboutus():
