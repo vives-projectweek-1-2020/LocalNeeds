@@ -18,6 +18,10 @@ def login():
 def profile():
 	return render_template("profile.html")
 
+@app.route("/about_us")
+def aboutus():
+	return render_template("about_us.html")
+
 @app.route("/categories")
 def categories():
 	return render_template("categories.html", categories=getcategories())
