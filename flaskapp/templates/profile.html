@@ -39,10 +39,11 @@
 
     <main >
         <section >
+            <div id="wrapper5">
                 {% if google_user.is_authenticated %}
                     <h2>{{ google_user.name }}</h2> 
                     <p>{{ google_user.email }}</p>
-                    <img src="{{ google_user.profile_pic }}" alt="Google profile pic"></img>
+                        <img src="{{ google_user.profile_pic }}" alt="Google profile pic" width="150px" >  </img>
                 {% endif %}
                 
                 <h3>{{Firstname}} {{Lastname}}</h3>
@@ -60,6 +61,7 @@
                         
                     {% endfor %}
                 </div>
+            </div>
         <section >
     <main >
                   
