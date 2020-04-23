@@ -4,14 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/main.css') }}">
-    <title>Categories</title>
+    <title>Add Categorie</title>
 </head>
 <body>
-
-    <!-- <div id="logo">
-        <img src="/static/images/logobackgroundrem.png" alt="logo" width="100" height="100" >
-    </div> -->
-    
     <div id="header-wrapper">
         <div id="header" class="container">
             
@@ -41,49 +36,11 @@
         </div>
     </div>
 
-<main id="test">
-<div id="wrapper4">
-	<div id="portfolio" class="container">
-		<div class="title">
-			<!-- <h2>Categories</h2>
-            <span class="byline">Choose one of the options</span>  -->
-        </div>
+    <main>
+        <section>
+     
+        </section> 
+    </main>
 
-        {% for categorie in categories %}
-
-            {% if loop.index % 4 == 1 and loop.index > 1 %}
-                <div class="row">
-            {% elif loop.index % 4 == 1 %}
-                <div>
-            {% endif %}
-
-            <div class="column{{ loop.index % 4 }}">
-                <div class="box"> <a href="#"><img src="images/scr01.jpg" alt="" class="image image-full" /></a>
-                    <h3>{{ categorie["name"] }}</h3>
-                    <p class="description">{{ categorie["description"] }}</p>
-                    <a href="/categoriesfeed/{{ categorie["name"] }}" class="button button-small moreinfo">Select</a>
-                </div>
-            </div>
-
-            {% if loop.index % 4 == 0 %}
-                </div>
-            {% endif %}
-
-        {% endfor %}
-
-        {% if categories|length > 4 %}
-            </div>
-        {% endif %}
-
-	</div>
-</div>
-</main>
-
-<div id="wrapper1">
-		<div class="content">
-			<p>Do you have a idea by yourself?</p>
-			<a href="/addcategorie" class="button">Add it here </a> </div>
-	</div>
-</div>
 </body>
 </html>
