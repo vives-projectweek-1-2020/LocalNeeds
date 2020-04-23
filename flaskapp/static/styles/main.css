@@ -79,6 +79,16 @@ body
  text-align: center;
  height: 13vh;
 }
+#wrapper5{
+	width: 1000px;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+.description{
+	text-align: center;
+	width: 500px;
+}
 
 
 #portfolio .box
@@ -218,11 +228,10 @@ form textarea
 	width: 100%;
 	border-radius: 0.50em;
 	margin: 1em 0em;
-	padding: 1.50em 1em;
+	padding: 1.50em 0em;
 	font-family: 'Source Sans Pro', sans-serif;
 	font-size: 1em;
 	text-align: center;
-
 }
 
 .title {
