@@ -154,6 +154,10 @@ def categoriesfeed(category):
 def categories():
 	return render_template("categories.html", categories=getcategories(), google_user=current_user)
 
+@app.route("/addcategorie")
+def addcategorie():
+	return render_template("addcategorie.html", google_user=current_user)
+
 def getcategories():
 	conn = sqlite3.connect("database/UberNeeds.db")
 	cursor = conn.execute("select * from Categories")
