@@ -329,3 +329,24 @@ form textarea
     float: left;
     padding-top: 1.95vh;
 }
+
+.last {
+	float: right;
+    background-color: #246cefa1;
+    height: 15vh;
+}
+
+.last .box {
+	margin-top: 3.5vh;
+}
+
+.box #white {
+	color: white;
+}
+
+.last .box a {
+	color: white;
+    text-decoration: none;
+    border: 1px solid white;
+    padding: 0.4em;
+}

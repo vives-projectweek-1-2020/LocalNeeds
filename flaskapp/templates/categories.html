@@ -3,87 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
     <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/main.css') }}">
     <title>Categories</title>
 </head>
 <body>
-
-    <!-- <div id="logo">
-        <img src="/static/images/logobackgroundrem.png" alt="logo" width="100" height="100" >
-    </div> -->
     
-    <div id="header-wrapper">
-        <div id="header" class="container">
-            
-            <div id="menu">
-                <ul>
-                    <li id="logo">
-                        <img src="/static/images/logoplatremovebg.png" alt="logo" width="150px">
-                    </li>
-                    <li class="current_page_item"><a href="/" accesskey="1" title="">Homepage</a></li>
-                    <li><a id="currenttab" href="/categories" accesskey="2" title="">Categories</a></li>
-                    <li><a href="/about_us" accesskey="3" title="">About Us</a></li>
-                    {% if google_user.is_authenticated %}
-                    <li>
-                        <a href="/profile">Profile</a>
-                    </li>
-                    <li>
-                        <a class="button" href="/logout" accesskey="4">Logout</a>
-                    </li>
-                    
-                    {% else %}
-                        <li>
-                            <a class="button" href="/login" accesskey="5">Google Login</a>
+    <header>
+        <div id="header-wrapper">
+            <div id="header" class="container">
+                
+                <div id="menu">
+                    <ul>
+                        <li id="logo">
+                            <img src="/static/images/logoplatremovebg.png" alt="logo" width="150px">
                         </li>
+                        <li class="current_page_item"><a href="/" accesskey="1" title="">Homepage</a></li>
+                        <li><a id="currenttab" href="/categories" accesskey="2" title="">Categories</a></li>
+                        <li><a href="/about_us" accesskey="3" title="">About Us</a></li>
+                        {% if google_user.is_authenticated %}
+                        <li>
+                            <a href="/profile">Profile</a>
+                        </li>
+                        <li>
+                            <a class="button" href="/logout" accesskey="4">Logout</a>
+                        </li>
+                        
+                        {% else %}
+                            <li>
+                                <a class="button" href="/login" accesskey="5">Google Login</a>
+                            </li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <div id="wrapper4">
+            <div id="portfolio" class="container">
+                <div class="title">
+                </div>
+
+                {% for categorie in categories %}
+
+                    {% if loop.index % 4 == 1 and loop.index > 1 %}
+                        <div class="row">
+                    {% elif loop.index % 4 == 1 %}
+                        <div>
                     {% endif %}
-                </ul>
+
+                    <div class="column{{ loop.index % 4 }}">
+                        <div class="box">
+                            <h3>{{ categorie["name"] }}</h3>
+                            <p class="description">{{ categorie["description"] }}</p>
+                            <a href="/categoriesfeed/{{ categorie["name"] }}" class="button button-small moreinfo">Select</a>
+                        </div>
+                    </div>
+
+                    {% if loop.index % 4 == 0 %}
+                        </div>
+                    {% endif %}
+
+                {% endfor %}
+
+                <div class="last column{{ (categories|length + 1) % 4 }}">
+                    <div class="box">
+                        <h3 id="white">Something missing or do you have an idea?</h3>
+                        <a href="/addcategorie" class="button">SEND A REQUEST</a>
+                    </div>
+                </div>
+
+                {% if categories|length > 3 %}
+                    </div>
+                {% endif %}
+
             </div>
         </div>
-    </div>
+    </main>
 
-<main id="test">
-<div id="wrapper4">
-	<div id="portfolio" class="container">
-		<div class="title">
-			<!-- <h2>Categories</h2>
-            <span class="byline">Choose one of the options</span>  -->
-        </div>
-
-        {% for categorie in categories %}
-
-            {% if loop.index % 4 == 1 and loop.index > 1 %}
-                <div class="row">
-            {% elif loop.index % 4 == 1 %}
-                <div>
-            {% endif %}
-
-            <div class="column{{ loop.index % 4 }}">
-                <div class="box"> <a href="#"><img src="images/scr01.jpg" alt="" class="image image-full" /></a>
-                    <h3>{{ categorie["name"] }}</h3>
-                    <p class="description">{{ categorie["description"] }}</p>
-                    <a href="/categoriesfeed/{{ categorie["name"] }}" class="button button-small moreinfo">Select</a>
-                </div>
-            </div>
-
-            {% if loop.index % 4 == 0 %}
-                </div>
-            {% endif %}
-
-        {% endfor %}
-
-        {% if categories|length > 4 %}
-            </div>
-        {% endif %}
-
-	</div>
-</div>
-</main>
-
-<div id="wrapper1">
-		<div class="content">
-			<p>Do you have a idea by yourself?</p>
-			<a href="/addcategorie" class="button">Add it here </a> </div>
-	</div>
-</div>
 </body>
 </html>
