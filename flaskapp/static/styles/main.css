@@ -303,7 +303,8 @@ form textarea
     margin-bottom: 2vh;
     padding-left: 21vh;
     float: left;
-    padding-right: 7vh;
+	padding-right: 7vh;
+	width: 35vh;
 }
 
 .category {
