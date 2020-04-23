@@ -221,10 +221,9 @@ form textarea
 				padding: 1.50em 1em;
 				font-family: 'Source Sans Pro', sans-serif;
 				font-size: 1em;
+				text-align: center;
+
 			}
-.idea{
-	text-align: center;
-}
 
 .title {
 	color: black;
