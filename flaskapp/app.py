@@ -166,13 +166,7 @@ def categoriesfeed(category):
 
         GoogleUser = User.get(userid)
         data[userid].extend([GoogleUser.name, GoogleUser.email, GoogleUser.profile_pic])
-
-    print(data)
-
     conn.close()
-
-    
-    
     return render_template("categoriesfeed.html", google_user=current_user, text=category, data=data)
 
 @app.route("/about_us")
