@@ -4,4 +4,4 @@ services:
         container_name: uberneeds
         build: ./flaskapp
         ports:
-          - "80:8008"
+          - "443:8008"
