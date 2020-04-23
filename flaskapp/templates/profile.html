@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/profile.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/main.css') }}">
     <title>Profile</title>
 </head>
 <body>
+
     <div id="header-wrapper">
         <div id="header" class="container">
             
@@ -16,7 +17,7 @@
                         <img src="/static/images/logoplatremovebg.png" alt="logo" width="150px">
                     </li>
                     <li class="current_page_item"><a href="/" accesskey="1" title="">Homepage</a></li>
-                    <li><a href="/categories" accesskey="2" title="">Categories</a></li>
+                    <li><a id="categories" href="/categories" accesskey="2" title="">Categories</a></li>
                     <li><a href="#" accesskey="3" title="">About Us</a></li>
                     {% if google_user.is_authenticated %}
                     <li>
