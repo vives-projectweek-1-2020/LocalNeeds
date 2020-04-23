@@ -57,10 +57,6 @@ def homepage():
 def get_google_provider_cfg():
     return requests.get(GOOGLE_DISCOVERY_URL).json()
 
-@app.route("/about_us")
-def about_us():
-	return render_template("about_us.html")
-
 @app.route("/login")
 def login():
 	# return render_template("login.html")
@@ -156,7 +152,7 @@ def categoriesfeed(category):
 
 @app.route("/about_us")
 def aboutus():
-	return render_template("about_us.html")
+	return render_template("about_us.html", google_user=current_user)
 
 @app.route("/categories")
 def categories():
