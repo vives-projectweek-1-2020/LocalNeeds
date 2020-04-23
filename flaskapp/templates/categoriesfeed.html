@@ -42,10 +42,12 @@
         <section class="category_details">
             
             {% for user in data %}
+            <div>
+                <img class="profile_pic" src="{{ data[user][7] }}" alt="Google profile pic {{ data[user][5] }}" width="150px" >  </img>
                 <div class="user">
-                    <p>Name: user 1</p>
+                    <p>Name: {{ data[user][5] }}</p>
                     <p>Location: {{ data[user][2] }}</p>
-                    <p>Email: gmail</p>
+                    <p>Email: {{ data[user][6] }}</p>
                     <p>Tel: {{ data[user][3] }}</p>
                     <p>Average rating: 
                         {% for i in range(data[user][4]) %}
@@ -56,6 +58,8 @@
                         {% endfor %}
                     </p>
                 </div>
+            </div>
+                
             {% endfor %}
 
         </section> 

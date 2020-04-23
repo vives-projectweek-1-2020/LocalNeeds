@@ -159,12 +159,19 @@ def categoriesfeed(category):
 
     for row in cursor:
         userid = row[0]
+
         data[userid] = []
         for element in row:
             data[userid].append(element)
-    conn.close()
+
+        GoogleUser = User.get(userid)
+        data[userid].extend([GoogleUser.name, GoogleUser.email, GoogleUser.profile_pic])
 
     print(data)
+
+    conn.close()
+
+    
     
     return render_template("categoriesfeed.html", google_user=current_user, text=category, data=data)
 
