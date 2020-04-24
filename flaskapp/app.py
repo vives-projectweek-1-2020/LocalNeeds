@@ -170,8 +170,27 @@ def save_user():
     add_user_info(user_id, postalcode, city, tel)
 
     services = request.form.getlist('service')
-
+    add_services_to_user(user_id, services)
     return redirect(url_for("profile"))
+
+def add_services_to_user(user_id, services):
+    conn = sqlite3.connect(db_name)
+
+    statement_insert = 'insert into UsersCategories values'
+    values = []
+
+    if len(services) > 1:
+        for service in services:
+            statement_insert += " (?, ?, ?),"
+            values.extend((user_id, service , -1))
+        statement_insert = statement_insert[:-1]
+    else:
+        statement_insert += " (?, ?, ?)"
+        values = [user_id, services[0], -1]
+
+    conn.execute(statement_insert, values)
+    conn.commit()
+    conn.close()
 
 def add_user_info(user_id, postalcode, city, tel):
     conn = sqlite3.connect(db_name)
@@ -207,6 +226,7 @@ def get_categories():
 
 @app.route("/categoriesfeed/<category>")
 def categoriesfeed(category):
+    category_id = get_id_of_category(category)
     conn = sqlite3.connect(db_name)
     statement = '''
         select Users.*, avgrating from Users
@@ -229,6 +249,17 @@ def categoriesfeed(category):
         data[userid].extend([GoogleUser.name, GoogleUser.email, GoogleUser.profile_pic])
     conn.close()
     return render_template("categoriesfeed.html", google_user=current_user, text=category, data=data)
+
+def get_id_of_category(category):
+    conn = sqlite3.connect(db_name)
+    cursor = conn.execute("select id from Categories where Name = ?", [category])
+    category_id = ""
+
+    for row in cursor:
+        category_id = row[0]
+    conn.close()
+
+    return category_id
 
 @app.route("/about_us")
 def aboutus():

@@ -50,13 +50,17 @@
                     <p>Location: {{ data[user][2] }}</p>
                     <p>Email: {{ data[user][6] }}</p>
                     <p>Tel: {{ data[user][3] }}</p>
-                    <p>Average rating: 
-                        {% for i in range(data[user][4]) %}
-                        <span class="fa fa-star checked"></span>
-                        {% endfor %}
-                        {% for i in range(5 - data[user][4]) %}
-                        <span class="fa fa-star"></span>
-                        {% endfor %}
+                    <p>Average rating:
+                        {% if data[user][4] != -1 %}
+                            {% for i in range(data[user][4]) %}
+                            <span class="fa fa-star checked"></span>
+                            {% endfor %}
+                            {% for i in range(5 - data[user][4]) %}
+                            <span class="fa fa-star"></span>
+                            {% endfor %}
+                        {% else %}
+                            user has no ratings yet
+                        {% endif %}
                     </p>
                 </div>
             </div>
