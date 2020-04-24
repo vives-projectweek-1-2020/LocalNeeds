@@ -6,21 +6,17 @@
 
 ## Concept
 
-We want to make a webpage that gives people with no time the ability to connect with people to complete their daily tasks. we can make this possible by depending on people that have more time during this quarantine, making a website available to both parties on which they can connect and help each other out for a compensation.
+We want to make a webpage that gives people with no time the ability to connect with people that have time to spare. They can link up and the volunteer can help the other party out. Volunteers can sign up on our website and then choose a categorie where they want to help. They then get displayed on the website with their contact information. People who need the help can visit the website, browse the categorie where they need help and get the contact information from the volunteer.
 
 ## How
 
-* People can log in as people in need and people with time to spare.
+* People with time to spare can log in with their google account.
 
-* A tab for people who require help, and a tab for people that can help these people out.
+* Users can give volunteers ratings.
 
-* They get connected based on location.
+* The volunteers get split into categories.
 
-* Corona measures get taken into account for how many people you can help at a time.
-
-* Possible infections can be put into the website and people who were connected get notified.
-
-* Users can give each other ratings and reviews.
+* Categories can be requested.
 
 * ...
 
@@ -28,9 +24,11 @@ We want to make a webpage that gives people with no time the ability to connect 
 
 * Docker
 
-* MySQL
+* SQLite
 
-* ...
+* Flask
+
+* HTML & CSS
 
 ## Project Members
 
@@ -54,6 +52,6 @@ The app can be started using docker-compose for starting the app manually please
 
 With docker-compose you can use the following command, the app will be available on localhost with port 8008.
 
-```
+```powershell
 docker-compose up -d
 ```
