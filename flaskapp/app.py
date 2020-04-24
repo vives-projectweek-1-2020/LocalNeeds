@@ -143,9 +143,21 @@ def logout():
     return redirect(url_for("homepage"))
 
 @app.route("/profile")
+@login_required
 def profile():
     services_info = get_categories()
-    return render_template("profile.html", google_user=current_user, services=services_info[0], services_id=services_info[1])
+    return render_template("profile.html", google_user=current_user, services=services_info[0], services_id=services_info[1], user_info=get_user_info())
+
+def get_user_info():
+    conn = sqlite3.connect("database/UberNeeds.db")
+    cursor = conn.execute("select * from Users where id = ?", [current_user.id])
+    data = []
+
+    for row in cursor:
+        data.append((row[1], row[2], row[3]))
+
+    conn.close()
+    return data[0]
 
 @app.route("/save_user", methods=['POST'])
 def save_user():
@@ -163,8 +175,20 @@ def save_user():
 
 def add_user_info(user_id, postalcode, city, tel):
     conn = sqlite3.connect(db_name)
-    statement = 'insert into User values (?, ?, ?, ?)'    
-    conn.execute(statement, [user_id, postalcode, city, tel])
+    statement_insert = 'insert into Users values (?, ?, ?, ?)'
+    statement_update = '''
+        update Users set 
+        PostalCode = ?,
+        Location = ?,
+        TelNumber = ?
+        where Users.id = ?
+    '''   
+
+    try:
+        conn.execute(statement_insert, [user_id, postalcode, city, tel])
+    except sqlite3.IntegrityError:
+        conn.execute(statement_update, [postalcode, city, tel, user_id])
+
     conn.commit()
     conn.close()
 
@@ -185,7 +209,7 @@ def get_categories():
 def categoriesfeed(category):
     conn = sqlite3.connect(db_name)
     statement = '''
-        select Users.* from Users
+        select Users.*, avgrating from Users
         join UsersCategories on Users.id = UsersCategories.User_id
         join Categories on UsersCategories.Categorie_id = Categories.id
         where Categories.Name = ?
