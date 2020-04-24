@@ -177,14 +177,26 @@ def get_user_services():
 
 def get_user_info():
     conn = sqlite3.connect("database/UberNeeds.db")
-    cursor = conn.execute("select * from Users where id = ?", [current_user.id])
+
+    data = get_user_by_id(current_user.id)
+
+    if len(data) == 0:
+        conn.execute("insert into Users values (?)", [current_user.id])
+        conn.commit()
+
+    data = get_user_by_id(current_user.id)
+
+    conn.close()
+    return data[0]
+
+def get_user_by_id(user_id):
+    cursor = conn.execute("select * from Users where id = ?", [user_id])
     data = []
 
     for row in cursor:
         data.append((row[1], row[2], row[3]))
-
-    conn.close()
-    return data[0]
+    
+    return data
 
 @app.route("/save_user", methods=['POST'])
 def save_user():
