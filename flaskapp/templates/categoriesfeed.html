@@ -10,7 +10,7 @@
 </head>
 <body>
     
-    <div id="header-wrapper-categoriesfeed">
+    <div id="header-wrapper">
         <div id="header" class="container">
             
             <div id="menu">
@@ -19,7 +19,7 @@
                         <img src="/static/images/logoplatremovebg.png" alt="logo" width="150px">
                     </li>
                     <li><a href="/" accesskey="1" title="">Homepage</a></li>
-                    <li><a id="categorytab" href="/categories" accesskey="2" title="">Categories</a></li>
+                    <li><a id="currenttab" href="/categories" accesskey="2" title="">Categories - {{ text }}</a></li>
                     <li><a href="/about_us" accesskey="3" title="">About Us</a></li>
                     {% if google_user.is_authenticated %}
                     <li>
@@ -38,11 +38,6 @@
             </div>
         </div>
     </div>
-    {% if google_user.is_authenticated %}
-    <p class="category">{{ text }}</p>
-    {% else %}
-    <p class="category" id="loggedin">{{ text }}</p>
-    {% endif %}
     <main>
         <section class="category_details">
             
