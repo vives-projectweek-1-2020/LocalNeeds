@@ -3,7 +3,7 @@
 
 # Uber Needs
 
-![logo](https://https://github.com/vives-projectweek-1-2020/Uber-Needs/blob/master/flaskapp/static/images/logoplat.png)
+![logo](https://github.com/vives-projectweek-1-2020/Uber-Needs/blob/master/flaskapp/static/images/logoplat.png)
 
 ## Concept
 
