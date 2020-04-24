@@ -210,7 +210,22 @@ def save_user():
 
     services = request.form.getlist('service')
     add_services_to_user(user_id, services)
+    remove_services(services, user_id)
     return redirect(url_for("profile"))
+
+def remove_services(services_by_user, user_id):
+    all_services = get_categories()
+    statement = '''
+        DELETE FROM UsersCategories
+        WHERE User_id = ? and Categorie_id = ?
+    '''
+
+    for service in all_services[1]:
+        if str(service) not in services_by_user:
+            conn = sqlite3.connect(db_name)
+            conn.execute(statement, [str(user_id), service])
+            conn.commit()
+            conn.close()
 
 def add_services_to_user(user_id, services):
     conn = sqlite3.connect(db_name)
