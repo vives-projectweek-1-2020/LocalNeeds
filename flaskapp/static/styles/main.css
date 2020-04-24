@@ -81,10 +81,11 @@ body
 }
 
 #wrapper5{
-	width: 1000px;
-	text-align: center;
-	margin-left: auto;
-	margin-right: auto;
+	width: 64vh;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15vh;
 }
 
 #portfolio .box
@@ -118,6 +119,12 @@ body
 .teamarticle 
 {
 color:rgba(0,0,0,0.6) ;
+}
+
+.teamarticle {
+    background-color: #ffffff8c;
+    border-radius: 0.5em;
+    padding: 1.5% 3% 1.5% 3%;
 }
 
 .gets,
