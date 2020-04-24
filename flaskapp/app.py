@@ -176,20 +176,14 @@ def save_user():
 def add_services_to_user(user_id, services):
     conn = sqlite3.connect(db_name)
 
-    statement_insert = 'insert into UsersCategories values'
-    values = []
+    statement_insert = 'insert into UsersCategories values (?, ?, ?)'
+    for service in services:
+        try:
+            conn.execute(statement_insert, [user_id, service, -1])
+            conn.commit()
+        except sqlite3.IntegrityError:
+            pass
 
-    if len(services) > 1:
-        for service in services:
-            statement_insert += " (?, ?, ?),"
-            values.extend((user_id, service , -1))
-        statement_insert = statement_insert[:-1]
-    else:
-        statement_insert += " (?, ?, ?)"
-        values = [user_id, services[0], -1]
-
-    conn.execute(statement_insert, values)
-    conn.commit()
     conn.close()
 
 def add_user_info(user_id, postalcode, city, tel):
