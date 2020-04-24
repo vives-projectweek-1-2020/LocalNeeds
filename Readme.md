@@ -49,7 +49,7 @@ We want to make a webpage that gives people with no time the ability to connect 
 
 ## How to start the app
 
-The app can be started using docker-compose for starting the app manually please check the readme in the flaskapp folder.
+The app can be started using docker-compose for starting the app manually please check the readme in the flaskapp folder. Make sure the .envexample is followed.
 
 With docker-compose you can use the following command, the app will be available on localhost with port 8008.
 
