@@ -29,6 +29,7 @@ GOOGLE_DISCOVERY_URL = "https://accounts.google.com/.well-known/openid-configura
 
 app = Flask(__name__)
 app.secret_key = os.urandom(24)
+db_name = "database/UberNeeds.db"
 
 # User session management setup
 # https://flask-login.readthedocs.io/en/latest
@@ -143,20 +144,46 @@ def logout():
 
 @app.route("/profile")
 def profile():
+    services_info = get_categories()
+    return render_template("profile.html", google_user=current_user, services=services_info[0], services_id=services_info[1])
 
-    conn = sqlite3.connect("database/UberNeeds.db")
+@app.route("/save_user", methods=['POST'])
+def save_user():
+    tel = request.form['tel']
+    postalcode = request.form['postalcode']
+    city = request.form['city']
+
+    email = current_user.email
+    user_id = User.get_userid_by_email(email)
+    add_user_info(user_id, postalcode, city, tel)
+
+    services = request.form.getlist('service')
+
+    return redirect(url_for("profile"))
+
+def add_user_info(user_id, postalcode, city, tel):
+    conn = sqlite3.connect(db_name)
+    statement = 'insert into User values (?, ?, ?, ?)'    
+    conn.execute(statement, [user_id, postalcode, city, tel])
+    conn.commit()
+    conn.close()
+
+def get_categories():
+    conn = sqlite3.connect(db_name)
     cursor = conn.execute("select * from Categories")
     services = []
+    services_id = []
 
     for row in cursor:
         services.append(row[1])
+        services_id.append(row[0])
     conn.close()
 
-    return render_template("profile.html", google_user=current_user, services=services)
+    return services, services_id
 
 @app.route("/categoriesfeed/<category>")
 def categoriesfeed(category):
-    conn = sqlite3.connect("database/UberNeeds.db")
+    conn = sqlite3.connect(db_name)
     statement = '''
         select Users.* from Users
         join UsersCategories on Users.id = UsersCategories.User_id

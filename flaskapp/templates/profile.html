@@ -52,7 +52,7 @@
 
                 <p>e-mailadres: {{ google_user.email }}</p>
                 
-                <form>
+                <form action="/save_user" method="POST">
                     <label for="tel">Tel:</label>
                     <input type="text" id="tel" name="tel" value="">
 
@@ -63,7 +63,7 @@
                     <input type="text" id="city" name="city" value="">
 
                     {% for service in services %}
-                        <input type="checkbox" id="{{ service }}" name="{{ service }}" value="{{ service }}">
+                        <input type="checkbox" id="{{ service }}" name="service" value="{{ services_id[loop.index] }}">
                         <label for="{{ service }}">{{ service }}</label>
                     {% endfor %}
 

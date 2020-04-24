@@ -24,6 +24,17 @@ class User(UserMixin):
         return user
 
     @staticmethod
+    def get_userid_by_email(email):
+        db = get_db()
+        user = db.execute(
+            "SELECT * FROM user WHERE email = ?", (email,)
+        ).fetchone()
+        if not user:
+            return None
+
+        return user[0]
+
+    @staticmethod
     def create(id_, name, email, profile_pic):
         db = get_db()
         db.execute(
