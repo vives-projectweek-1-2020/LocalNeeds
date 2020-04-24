@@ -121,6 +121,13 @@ body
 	color:rgba(0,0,0,0.6);
 }
 
+.gets,
+.gots
+{
+	position: relative;
+	bottom: 12vh;
+}
+
 .teamarticle {
     background-color: #ffffff8c;
     border-radius: 0.5em;
