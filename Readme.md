@@ -3,6 +3,8 @@
 
 # Uber Needs
 
+![logo](https://github.com/vives-projectweek-1-2020/Uber-needs/flaskapp/static/images/logoplat.png)
+
 ## Concept
 
 We want to make a webpage that gives people with no time the ability to connect with people that have time to spare. They can link up and the volunteer can help the other party out. Volunteers can sign up on our website and then choose a categorie where they want to help. They then get displayed on the website with their contact information. People who need the help can visit the website, browse the categorie where they need help and get the contact information from the volunteer.
