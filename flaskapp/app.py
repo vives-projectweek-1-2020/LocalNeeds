@@ -143,7 +143,7 @@ def logout():
 
 @app.route("/profile")
 def profile():
-	return render_template("profile.html", google_user=current_user)
+    return render_template("profile.html", google_user=current_user)
 
 @app.route("/categoriesfeed/<category>")
 def categoriesfeed(category):

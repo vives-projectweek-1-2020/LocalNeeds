@@ -118,7 +118,7 @@ body
 .gots,
 .teamarticle 
 {
-color:rgba(0,0,0,0.6) ;
+	color:rgba(0,0,0,0.6);
 }
 
 .teamarticle {
@@ -379,4 +379,30 @@ ul li #categorytab {
 
 .gittext {
 	text-align: center;
+}
+
+.user_same {
+	margin-top: 5vh;
+    background-color: #ffffff8c;
+	border-radius: 0.5em;
+	color: rgba(0,0,0,0.6);
+}
+
+.user_profile {
+	margin-left: 46vh;
+    padding: 9.5% 3% 1.5% 3%;
+    height: 4vh;
+    width: 9vh;
+}
+
+.user_details {
+	margin-left: 3vh;
+    padding: 2.5% 3% 1.5% 3%;
+    height: 58vh;
+    width: 52vh;
+}
+
+.user_profile img {
+	left: 26%;
+    top: 22.5%;
 }
