@@ -146,7 +146,34 @@ def logout():
 @login_required
 def profile():
     services_info = get_categories()
-    return render_template("profile.html", google_user=current_user, services=services_info[0], services_id=services_info[1], user_info=get_user_info())
+    user_services = get_user_services()
+    checked_services = make_checked_services_list(user_services, services_info[0])
+    return render_template("profile.html", google_user=current_user, services=services_info[0], services_id=services_info[1], user_info=get_user_info(), checked_services=checked_services)
+
+def make_checked_services_list(user_services, all_services):
+    checked = {}
+    for service in all_services:
+        if service in user_services:
+            checked[service] = "Checked"
+        else:
+            checked[service] = ""
+    return checked
+
+def get_user_services():
+    conn = sqlite3.connect("database/UberNeeds.db")
+    statement = '''
+        select Name from UsersCategories
+        join Categories on UsersCategories.Categorie_id = Categories.id
+        where User_id = ?
+    '''
+    cursor = conn.execute(statement, [current_user.id])
+    data = []
+
+    for row in cursor:
+        data.append(row[0])
+
+    conn.close()
+    return data
 
 def get_user_info():
     conn = sqlite3.connect("database/UberNeeds.db")

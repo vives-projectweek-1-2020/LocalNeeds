@@ -63,7 +63,7 @@
                     <input type="text" id="city" name="city" value="{{ user_info[1] }}">
 
                     {% for service in services %}
-                        <input type="checkbox" id="{{ service }}" name="service" value="{{ services_id[loop.index-1] }}">
+                        <input type="checkbox" id="{{ service }}" name="service" value="{{ services_id[loop.index-1] }}" {{ checked_services[service] }}>
                         <label for="{{ service }}">{{ service }}</label>
                     {% endfor %}
 
