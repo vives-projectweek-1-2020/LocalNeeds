@@ -143,7 +143,16 @@ def logout():
 
 @app.route("/profile")
 def profile():
-    return render_template("profile.html", google_user=current_user)
+
+    conn = sqlite3.connect("database/UberNeeds.db")
+    cursor = conn.execute("select * from Categories")
+    services = []
+
+    for row in cursor:
+        services.append(row[1])
+    conn.close()
+
+    return render_template("profile.html", google_user=current_user, services=services)
 
 @app.route("/categoriesfeed/<category>")
 def categoriesfeed(category):

@@ -382,7 +382,7 @@ ul li #categorytab {
 }
 
 .user_same {
-	margin-top: 5vh;
+	margin-top: 12vh;
     background-color: #ffffff8c;
 	border-radius: 0.5em;
 	color: rgba(0,0,0,0.6);
@@ -397,12 +397,37 @@ ul li #categorytab {
 
 .user_details {
 	margin-left: 3vh;
-    padding: 2.5% 3% 1.5% 3%;
-    height: 58vh;
+    padding: 1.5% 3% 1.5% 3%;
+    height: 39vh;
     width: 52vh;
 }
 
 .user_profile img {
 	left: 26%;
-    top: 22.5%;
+    top: 30%;
+}
+
+input[type=text], input[type=number], select {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+
+input[type=submit] {
+	width: 100%;
+	background-color: #4CAF50;
+	color: white;
+	padding: 14px 20px;
+	margin: 16px 0;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+  
+input[type=submit]:hover {
+	background-color: #45a049;
 }

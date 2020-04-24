@@ -50,17 +50,25 @@
             </div>
             <div class="user_details user_same">
 
-                <p>{{ google_user.email }}</p>
+                <p>e-mailadres: {{ google_user.email }}</p>
                 
-                <h4>Average rating: {{avgscore}}/5</h4>
-                
-                <div>
-                    {% for review in reviews %}
-                        <p>Score: {{ review["score"] }}</p>
-                        <p>{{ review["comment"] }}</p> 
-                        
+                <form>
+                    <label for="tel">Tel:</label>
+                    <input type="text" id="tel" name="tel" value="">
+
+                    <label for="postalcode">Postal:</label>
+                    <input type="number" id="postalcode" name="postalcode" value="">
+
+                    <label for="city">City:</label>
+                    <input type="text" id="city" name="city" value="">
+
+                    {% for service in services %}
+                        <input type="checkbox" id="{{ service }}" name="{{ service }}" value="{{ service }}">
+                        <label for="{{ service }}">{{ service }}</label>
                     {% endfor %}
-                </div>
+
+                    <input type="submit" value="Save">
+                </form>
 
             </div>
             {% endif %}
