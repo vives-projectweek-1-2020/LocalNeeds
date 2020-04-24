@@ -178,18 +178,18 @@ def get_user_services():
 def get_user_info():
     conn = sqlite3.connect("database/UberNeeds.db")
 
-    data = get_user_by_id(current_user.id)
+    data = get_user_by_id(current_user.id, conn)
 
     if len(data) == 0:
-        conn.execute("insert into Users values (?)", [current_user.id])
+        conn.execute("insert into Users (id) values (?)", [current_user.id])
         conn.commit()
 
-    data = get_user_by_id(current_user.id)
+    data = get_user_by_id(current_user.id, conn)
 
     conn.close()
     return data[0]
 
-def get_user_by_id(user_id):
+def get_user_by_id(user_id, conn):
     cursor = conn.execute("select * from Users where id = ?", [user_id])
     data = []
 
