@@ -371,3 +371,12 @@ ul li #categorytab {
     height: 16.2vh;
     line-height: 7vh;
 }
+
+.git {
+	text-decoration: underline;
+	color: black;
+}
+
+.gittext {
+	text-align: center;
+}
