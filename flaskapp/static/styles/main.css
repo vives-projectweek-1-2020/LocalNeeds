@@ -328,10 +328,14 @@ form textarea
     letter-spacing: 0.2em;
     font-size: 0.90em;
     text-align: center;
-    margin-left: 38.15%;
+    margin-left: 76vh;
     width: 35vh;
 	margin-top: -6.3vh;
     margin-bottom: 3.4vh;
+}
+
+#loggedin {
+	margin-left: 72.5vh;
 }
 
 ul li #categorytab {
@@ -410,7 +414,7 @@ ul li #categorytab {
 }
 
 .user_profile img {
-	left: 23.4%;
+	left: 48.7vh;
     top: 30%;
 }
 
